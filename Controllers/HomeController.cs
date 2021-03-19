@@ -1,37 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Hello.Application.MTbl_product;
+using Hello.WebApp.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Hello.WebApi.Models;
+using Newtonsoft.Json;
 
-namespace Hello.WebApi.Controllers
+namespace Hello.WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ITbl_productApiClient _nhanSuApiClient;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ITbl_productApiClient sinhVienApiClient)
         {
-            _logger = logger;
+            _nhanSuApiClient = sinhVienApiClient;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            var response = await _nhanSuApiClient.GetAll();
+
+            var model = JsonConvert.DeserializeObject<List<Tbl_productResponse>>(response);
+
+            return View(model);
+        }
+
+
+        [HttpGet]
+        public IActionResult Login()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Login(Tbl_productRequest request)
         {
-            return View();
+            if (request.username == "Nishat" && request.password == "1234")
+            {
+                 return Redirect("https://localhost:44345/");
+               // return RedirectToAction("index");
+            }
+            return Redirect("/Home/Login");
+           // return RedirectToAction("index");
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+
     }
 }

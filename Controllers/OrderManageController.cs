@@ -10,11 +10,11 @@ using Newtonsoft.Json;
 
 namespace Hello.WebApp.Controllers
 {
-    public class UserController : Controller
+    public class OrderManageController : Controller
     {
         private readonly ITbl_productApiClient _nhanSuApiClient;
 
-        public UserController(ITbl_productApiClient sinhVienApiClient)
+        public OrderManageController(ITbl_productApiClient sinhVienApiClient)
         {
             _nhanSuApiClient = sinhVienApiClient;
         }
