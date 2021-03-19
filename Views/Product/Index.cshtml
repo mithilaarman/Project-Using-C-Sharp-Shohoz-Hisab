@@ -1,0 +1,186 @@
+﻿<div class="container-fluid p-0" style="height: 100vh;min-width: 1000px">
+    <div class="float-right" style="width: 100%;height: 100vh;">
+        <div class="p-2" style="        width: 100%;
+        height: 55px;
+        background: #D1CAFF
+">
+            <div class="bg-white text-center pt-1 float-left mr-2 hidePrinf" style="width: 50px;height: 100%;border-radius: 6px">
+                <a href="/">
+                    <i class="fa fa-home text-primary" aria-hidden="true" style="font-size: 200%"></i>
+                    </a>
+            </div>
+        </div>
+        <div class="container " style="height: 1000px">
+            <div class="row m-0">
+                <div id="addProductBox" class="col-4 p-3" style="height: calc(100vh - 70px);">
+                    <form method="post" action="Product/Create" enctype="multipart/form-data">
+                        <div class="bg-white shadow-ok pt-2 pl-3 pr-3 pb-3" style="border-radius: 10px">
+                            <p class="font-weight-bold mb-1">Add product</p>
+                            <div class="bg-primary" style="width: 40px;height: 3px;"></div>
+                            <label class="mt-2">Products name</label>
+                            <input class="form-control" type="text" name="name" required>
+                            <label class="mt-2">Cost of Money</label>
+                            <input class="form-control" type="number" name="price" required>
+                            <label class="mt-2">Category</label>
+                            <select class="form-control" name="category">
+                                <option value="1">Android</option>
+                                <option value="2">iPhone</option>
+                            </select>
+                            <label class="mt-2">Image</label>
+                            <input id="image_post" onchange="showImage2.call(this)" class="input_form_file" type="file" name="ImageFile" style="border:0; border-radius: 10px;height: 40px; width:100%;outline: none; opacity: 0;position: relative;z-index: 3;" required>
+                            <img class="float-left " src="../image/icon/icon_upimg.svg" width="140px" style="position: relative;top: -40px;z-index: 2;>
+                            <img class="float-left ml-2" src="" width="35px" height="65px" id="image_write_post" style="top: -40px;position: relative;display: none;border-radius: 8px">
+                            <button type="submit" class="btn btn-primary mt-2 float-right">Add</button>
+                            @*<input type="submit" value="ok" />*@
+
+                            <div style="clear: both;"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="editProductBox" class="col-4 p-3" style="height: calc(100vh - 70px);display:none">
+                    <form method="post" action="Product/Update" enctype="multipart/form-data">
+                        <div class="bg-white shadow-ok pt-2 pl-3 pr-3 pb-3" style="border-radius: 10px">
+                            <input id="editId" class="form-control" type="text" name="id" style="display:none">
+                            <p class="font-weight-bold mb-1">Edit</p>
+                            <div class="bg-primary" style="width: 40px;height: 3px;"></div>
+                            <label class="mt-2">Name</label>
+                            <input id="editName" class="form-control" type="text" name="name" required>
+                            <label class="mt-2">Price</label>
+                            <input id="editPrice" class="form-control" type="number" name="price" required>
+                            <label class="mt-2">Category</label>
+                            <select id="editCategory" class="form-control" name="category">
+                                <option value="1">Android</option>
+                                <option value="2">iPhone</option>
+                            </select>
+                            <label class="mt-2">Image</label>
+                            <input id="imageOld" name="image"/ style="display:none">
+                            <input id="image_post" class="input_form_file" type="file" name="ImageFile" style="border:0; border-radius: 10px;height: 40px; width:100%;outline: none; opacity: 0;position: relative;z-index: 3;">
+                            <img id="editImage" class="float-left " src="" width="140px" style="position: relative;top: -40px;z-index: 2;>
+                            <img class="float-left ml-2" src="" width="35px" height="65px" id="image_write_post1" style="top: -40px;position: relative;display: none;border-radius: 8px">
+                            <button type="submit" class="btn btn-primary float-right ml-2">Edit</button>
+                            <div id="cancelEdit" class="btn btn-primary float-right ">Cancel</div>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <script type="text/javascript">
+                    function showImage2() {
+                        if (this.files && this.files[0]) {
+                            var obj = new FileReader();
+                            obj.onload = function (data) {
+                                var image = document.getElementById("image_write_post");
+                                image.src = data.target.result;
+                                image.style.display = "block";
+                            }
+                            obj.readAsDataURL(this.files[0]);
+                        }
+                    }
+                    
+                </script>
+                <div class="col-8 p-3" style="height: calc(100vh - 70px);">
+                    <div class="bg-white shadow-ok pt-1 pl-2 pr-2" style="height: 500px;border-radius: 10px">
+                        <div class="p-2">
+                            <p class="float-left font-weight-bold mb-0" style="width: 20%">Image</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 25%">Name</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 15%">Price</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 15%">Category</p>
+                            <p class="float-right font-weight-bold mb-0" style="width: 15%">Method</p>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <style type="text/css">
+                            .infoCustomer--box:hover {
+                                background: #D1CAFF;
+                            }
+                        </style>
+                        <div class="p-2 pt-2 scroll--item" style="height: calc(100vh - 250px);overflow-y: scroll;">
+                            <div id="fetchProduct">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>
+<script>
+
+
+    fetchProductApi();
+    function fetchProductApi() {
+        var fetchProduct = $("#fetchProduct");
+        fetchProduct.html("");
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            url: "https://localhost:44358/api/Tbl_product",
+            contentType: "html",
+            success: function (data) {
+                console.log(data);
+                $.each(data, function (index, value) {     
+                    var categoryText = '';
+                    if (value.category == 1) {
+                        categoryText = "Android";
+                    } else {
+                        categoryText = "iPhone";
+                    }
+                    var Data = `<div class="infoCustomer--box p-2">
+                                <div class="float-left pr-4" style="width: 20%;height: 50px;">
+                                    <img src="/image/`+ value.image + `" width="80%" height="100%">
+                                </div>
+                                <p class="float-left mb-0" style="width: 25%;">`+ value.name + `</p>
+                                <p class="float-left mb-0" style="width: 15%;">`+ value.price + `</p>
+                                <p class="float-left mb-0" style="width: 25%;">`+ categoryText + `</p>
+                                <div class="float-left mb-0" style="width: 15%;display: flex;">
+                                    <div class="badge badge-primary" onclick="editProduct(` + value.id + `,'` + value.name + `','` + value.price + `','` + value.category + `','` + value.image + `')">Edit</div>
+                                    <div class="badge badge-light ml-1" onclick="deleteProduct(`+ value.id +`)">Delete</div>
+                                </div>
+                                <div style="clear: both;"></div>
+                            </div>`;
+                    fetchProduct.append(Data);
+                }
+                )
+            }
+        });
+    }
+
+
+    function deleteProduct(id) {
+        $.ajax({
+            method: "post",
+            url: "https://localhost:44358/api/Tbl_product/Delete",
+            data: JSON.stringify({
+                id: parseInt(id)
+            }),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            success: function (data) {
+                fetchProductApi();
+            }
+        });
+    }
+
+    function editProduct(id,name,price,category,image) {        
+        $("#addProductBox").hide();
+        $("#editProductBox").show();
+        
+        $("#editId").val(id);
+        $("#editName").val(name);
+        $("#editPrice").val(price);
+        $("#editCategory").val(category);
+        $("#editImage").attr("src", "/image/" + image);
+        $("#imageOld").val(image);
+        
+        console.log(id, name, price, category, image);
+    }
+
+
+    $("#cancelEdit").click(function () {
+        $("#addProductBox").show();
+        $("#editProductBox").hide();
+    })
+</script>

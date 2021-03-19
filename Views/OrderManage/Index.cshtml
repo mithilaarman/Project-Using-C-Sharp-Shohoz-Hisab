@@ -1,0 +1,143 @@
+﻿@*  *@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid p-0" style="height: 100vh;min-width: 1000px">
+    <div class="float-right" style="width: 100%;height: 100vh;">
+        <div class="p-2" style="        width: 100%;
+        height: 55px;
+        background: #D1CAFF
+">
+            <a href="/">
+                <div class="bg-white text-center pt-1 float-left mr-2 hidePrinf" style="width: 50px;height: 100%;border-radius: 6px">
+                    <i class="fa fa-home text-primary" aria-hidden="true" style="font-size: 200%"></i>
+                </div>
+            </a>
+        </div>
+        <div class="container-fluid p-3">
+            <div class="row m-0">
+                <div class="col-12">
+                    <div class="bg-white shadow-ok pt-1 pl-2 pr-2" style="height: calc(100vh - 100px);border-radius: 10px">
+                        <div class="p-2">
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Code</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Total</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Pay</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Refund</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Fee</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Discount</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Date</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Method</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Customer</p>
+                            <p class="float-left font-weight-bold mb-0" style="width: 10%">Bill</p>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <style type="text/css">
+                            .infoCustomer--box:hover {
+                                background: #D1CAFF;
+                            }
+                        </style>
+                        <div class="p-2 pt-2 scroll--item" style="height: calc(100vh - 170px);overflow-y: scroll;">
+                        <div id="fetchOrder">
+                            
+                            
+                        </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div id="print" class="mt-2 p-4 shadow-ok bg-white ml-5" style="width: 70%;height: 500px;">
+            <p class="text-center" id="dateBill">10/11/2020 08:11:49 Code 1</p>
+            <p class="mb-0">Shohoz Hisab</p>
+            <p class="mb-0">Phone: +01700000000</p>
+            <p>Admin</p>
+            <div id="fetchItem">
+                
+            </div>
+            <p class="float-left mb-0 mt-3">Discount</p>
+            <p class="float-right mb-0 mt-3" id="discountBill">15000৳</p>
+            <div style="clear: both;"></div>
+            <p class="float-left mb-0">Fee</p>
+            <p class="float-right mb-0">0</p>
+            <div style="clear: both;"></div>
+            <p class="float-left mb-0 font-weight-bold" style="font-size: 130%">Total</p>
+            <p class="float-right mb-0 font-weight-bold" style="font-size: 130%" id="totalBill">300000৳</p>
+            <div style="clear: both;"></div>
+
+            <p class="float-left mb-0 mt-3">Pay</p>
+            <p class="float-right mb-0 mt-3" id="receiveBill">15000৳</p>
+            <div style="clear: both;"></div>
+            <p class="float-left mb-0">Refund</p>
+            <p class="float-right mb-0" id="refundBill">0</p>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    fetchOrderApi();
+    function fetchOrderApi() {
+        var fetchOrder = $("#fetchOrder");
+        fetchOrder.html("");
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            url: "https://localhost:44358/api/Tbl_payment/GetPaymentAll",
+            contentType: "html",
+            success: function (data) {
+                $.each(data, function (index, value) {  
+                    var Data = `<div class="infoCustomer--box p-2">
+                                <p class="float-left mb-0" style="width: 10%">#`+ value.id +`</p>
+                                <p class="float-left mb-0" style="width: 10%">`+ value.total +`</p>
+                                <p class="float-left mb-0" style="width: 10%">`+ value.receive +`</p>
+                                <p class="float-left mb-0" style="width: 10%">`+ value.refund +`</p>
+                                <p class="float-left mb-0" style="width: 10%">`+ value.fee +`</p>
+                                <p class="float-left mb-0" style="width: 10%">`+ value.discount +`</p>
+                                <p class="float-left mb-0" style="width: 10%">`+ value.create_at +`</p>
+                                <p class="float-left mb-0" style="width: 10%">`+ value.type +`</p>
+                                <p class="float-left mb-0" style="width: 10%">`+ value.name +`</p>
+                                <p class="float-left mb-0" style="width: 10%" data-toggle="modal" data-target="#exampleModal" onclick="getBillDetail(` + value.id + `,'` + value.total + `','` + value.receive + `','` + value.refund + `','` + value.fee + `','` + value.discount + `','` + value.create_at + `','` + value.type + `','` + value.name + `',` + value.idorder+`)">Bill</p>
+                                <div style="clear: both;"></div>
+                            </div>`;
+                    fetchOrder.append(Data);
+                }
+                )
+            }
+        });
+    }
+    function getBillDetail(id, total, receive, refund, fee, discount, create_at, type, name, idorder) {
+        console.log(id, total, receive, refund, fee, discount, create_at, type, name, idorder);
+        $("#dateBill").text(create_at + " Code " + id);
+        $("#discountBill").text(discount +"৳");
+        $("#totalBill").text(total + "৳");
+        $("#receiveBill").text(receive + "৳");
+        $("#refundBill").text(refund + "৳");
+
+        var fetchItem = $("#fetchItem");
+        fetchItem.html("");
+        $.ajax({
+            type: "get",
+            dataType: "json",
+            url: "https://localhost:44358/api/Tbl_order/GetOrderByIdOrder/"+idorder,
+            contentType: "html",
+            success: function (data) {
+                $.each(data, function (index, value) {
+                    var Data = `<p class="float-left mb-0" style="width: 50%">` + value.name + `</p><p class="float-left mb-0" style="width: 25%">` + value.quanlity + `</p><p class="float-left mb-0 bg-danger" style="width: 25%">
+                <p class="float-right mb-0">`+ value.priceItem + `৳</p></p>
+                <div style="clear: both;">`;
+                    fetchItem.append(Data);
+                })
+            }
+        })
+    }
+</script>

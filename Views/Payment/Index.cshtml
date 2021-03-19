@@ -1,0 +1,131 @@
+﻿@model Hello.Application.MTbl_payment.Tbl_paymentResponse
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="container-fluid p-0" style="height: 100vh;min-width: 1000px">
+        <div class="float-right" style="width: 100%;height: 100vh;">
+            <div class="p-2" style="        width: 100%;
+        height: 55px;
+        background: #D1CAFF
+">
+                <div class="bg-white text-center pt-1 float-left mr-2 hidePrinf" style="width: 50px;height: 100%;border-radius: 6px">
+                    <a href="/">
+                        <i class="fa fa-home text-primary" aria-hidden="true" style="font-size: 200%"></i>
+                        </a>
+                </div>
+            </div>
+            <div class="container" style="height: 1000px">
+                <div class=" p-3" style="width: 100%">
+                    <div class="hidePrinf">
+                      
+                            <div onclick="addNewOrder()" class="btn btn-primary float-right">Create new order</div>
+                       
+                        <p class="text-center font-weight-bold ml-5" style="font-size: 150%">Refund: @Html.DisplayFor(model => model.refund) VND</p>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <div class="row m-0">
+                        <div class="shadow-ok bg-white p-3 " style="width: 40%;height: 600px;margin: auto">
+                            <div class="btn btn-primary js-print-link hidePrinf" style="width: 100%"><i class="fa fa-print mr-2" aria-hidden="true"></i> Print bill</div>
+                            <div id="print" class="mt-2 p-4 shadow-ok" style="width: 100%;height: 500px;">
+                                <p class="text-center">@Html.DisplayFor(model => model.create_at) Code @Html.DisplayFor(model => model.idorder)</p>
+                                <p class="mb-0">Shohoz Hisab</p>
+                                <p class="mb-0">Phone: +01700000000</p>
+                                <p>Account:Admin</p>
+                                <div id="GetAjax">
+                                    
+                                </div>
+                                <p class="float-left mb-0 mt-3">Discount</p>
+                                <p class="float-right mb-0 mt-3">
+                                    @Html.DisplayFor(model => model.discount)৳
+                                                            </p>
+                                <div style="clear: both;"></div>
+                                <p class="float-left mb-0">Fee</p>
+                                <p class="float-right mb-0">0</p>
+                                <div style="clear: both;"></div>
+                                <p class="float-left mb-0 font-weight-bold" style="font-size: 130%">Total</p>
+                                <p class="float-right mb-0 font-weight-bold" style="font-size: 130%">
+                                    @Html.DisplayFor(model => model.total)৳
+                                                            </p>
+                                <div style="clear: both;"></div>
+
+                                <p class="float-left mb-0 mt-3">Pay</p>
+                                <p class="float-right mb-0 mt-3">
+                                    @Html.DisplayFor(model => model.receive)৳
+                                                            </p>
+                                <div style="clear: both;"></div>
+                                <p class="float-left mb-0">Refund</p>
+                                <p class="float-right mb-0">
+                                    @Html.DisplayFor(model => model.refund)৳
+                                                            </p>
+                                <div style="clear: both;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('.js-print-link').on('click', function () {
+            $(".hidePrinf").hide();
+
+            window.print();
+            $(".hidePrinf").show();
+        });
+
+        fetchItemBill();
+        function fetchItemBill() {
+            var SetGetAjax = $("#GetAjax");
+            SetGetAjax.html("");
+            $(document).ready(function () {
+                $("#GetAll").hide();
+                $("#GetAjax").show();
+                $.ajax({
+                    type: "get",
+                    dataType: "json",
+                    url: "https://localhost:44358/api/Tbl_order/GetOrder",
+                    contentType: "html",
+                    success: function (data) {
+                        //console.log(data);
+                        $.each(data, function (index, value) {
+                            var Data = `<p class="float-left mb-0" style="width: 50%">` + value.name + `</p><p class="float-left mb-0" style="width: 25%">` + value.quanlity +`</p><p class="float-left mb-0 bg-danger" style="width: 25%">
+                                    <p class="float-right mb-0">`+ value.price +`৳
+</p></p>
+                                    <div style="clear: both;"></div>`;
+                            SetGetAjax.append(Data);
+                        }
+                        )
+                    }
+                });
+            })
+        }
+
+        function addNewOrder() {
+            $.ajax({
+                method: "post",
+                url: "https://localhost:44358/api/Tbl_order/Create",
+                data: JSON.stringify({
+                    fee: 0,
+                    total: 0,
+                    discount: 0
+                }),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                success: function (data) {
+                    window.location.href = "/";
+                }
+            });
+        }
+    </script>
+
+    
+
+
+
+
