@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>858262c7-0f0b-4e84-b2de-79342d0b4085</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hello.Application\Hello.Application.csproj" />
+    <ProjectReference Include="..\Hello.Data\Hello.Data.csproj" />
+  </ItemGroup>
+
+</Project>
