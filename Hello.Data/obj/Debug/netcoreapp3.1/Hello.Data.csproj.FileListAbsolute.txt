@@ -1,0 +1,72 @@
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.deps.json
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.json
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.dev.json
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csprojAssemblyReference.cache
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csproj.CoreCompileInputs.cache
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfoInputs.cache
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfo.cs
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\KimAnh\source\repos\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.genruntimeconfig.cache
+E:\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.deps.json
+E:\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.json
+E:\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.dev.json
+E:\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.dll
+E:\OrderSystemPJ\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.pdb
+E:\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csprojAssemblyReference.cache
+E:\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfoInputs.cache
+E:\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfo.cs
+E:\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csproj.CoreCompileInputs.cache
+E:\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.dll
+E:\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.pdb
+E:\OrderSystemPJ\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.genruntimeconfig.cache
+C:\Users\User\source\repos\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.deps.json
+C:\Users\User\source\repos\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.json
+C:\Users\User\source\repos\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.dev.json
+C:\Users\User\source\repos\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\User\source\repos\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\User\source\repos\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfo.cs
+C:\Users\User\source\repos\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\User\source\repos\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\User\source\repos\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.genruntimeconfig.cache
+C:\Users\User\source\repos\Final project\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.deps.json
+C:\Users\User\source\repos\Final project\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.json
+C:\Users\User\source\repos\Final project\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.dev.json
+C:\Users\User\source\repos\Final project\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\User\source\repos\Final project\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\User\source\repos\Final project\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Final project\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Final project\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfo.cs
+C:\Users\User\source\repos\Final project\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Final project\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\User\source\repos\Final project\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\User\source\repos\Final project\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.genruntimeconfig.cache
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.deps.json
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.json
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.dev.json
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csprojAssemblyReference.cache
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfoInputs.cache
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfo.cs
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csproj.CoreCompileInputs.cache
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\nisha\Dropbox\My PC (Nishat)\Desktop\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.genruntimeconfig.cache
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.deps.json
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.json
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.runtimeconfig.dev.json
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\bin\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csprojAssemblyReference.cache
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.AssemblyInfo.cs
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.dll
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.pdb
+C:\Users\User\source\repos\New folder (2)\Final project000\Final project000\Hello.Data\obj\Debug\netcoreapp3.1\Hello.Data.genruntimeconfig.cache
