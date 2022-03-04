@@ -18,6 +18,7 @@ purchase management system, customer and employee management system which can au
 the way never did before. With real time reporting you can get a clear view of your business anytime you want.
 
 2 Proposed Features:
+
 The features of our project are as follows:
 1. Login/Access Account:
 (a) The system shall allow users to register an account and login to their account with matching their
