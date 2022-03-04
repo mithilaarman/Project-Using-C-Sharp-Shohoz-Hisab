@@ -2,19 +2,22 @@
 point of sales system
 
 
-1 Introduction
-We are going to develop a website on Point of Sale System (POS) which will give an online platform to
+1 Introduction:
+
+Development of a website on Point of Sale System (POS) which will give an online platform to
 communicate with their all services. A point of sale (POS) system is a place where a customer executes the
 payment for products and where sales taxes may become payable. A POS system allows your business to accept
 payments and keep track of sales. It sounds simple enough, but the setup can work in different ways, depending
 on whether you sell online, have a physical storefront, or both. A point-of-sale system used to refer to the cash
 register at a store.
-Shohoz Hisab point of sales system is a easy to use for retail store and super shop. We can use it in any device such
+
+Shohoz Hisab point of sales system is a easy to use for retail store and super shop. Can use it in any device such
 as our laptop or desktop computer. By connecting POS printer, bar-code scanner and cash drawer we can make
 it a full functional Point Of Sales system. It has the facility including inventory management system, sales and
 purchase management system, customer and employee management system which can automate organization
 the way never did before. With real time reporting you can get a clear view of your business anytime you want.
-2 Proposed Features
+
+2 Proposed Features:
 The features of our project are as follows:
 1. Login/Access Account:
 (a) The system shall allow users to register an account and login to their account with matching their
@@ -42,8 +45,6 @@ details.
 7. Security:
 (a) Database connection close. After data use the database connection will be closed.
 (b) No general user can get access to update the database.
-1
-CSE3200: Software Development-V Introductory Project Report
 (c) The users should get up to date information and emergency contact from the system.
 8. Portability:
 (a) System must run on any browser regardless of the operating system.
